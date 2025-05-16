@@ -10,8 +10,8 @@ export default function Home() {
       </div>
       <div className="flex flex-col md:flex-row gap-12">
         <Consulting />
-        <span className="h-46 my-auto flex-grow w-[2px] bg-gray-500 hidden md:block" />
-        <span className="mx-auto w-2/3 my-auto flex-grow h-[2px] bg-gray-500 block md:hidden" />
+        <span className="h-66 my-auto flex-grow w-[4px] bg-accent hidden md:block" />
+        <span className="mx-auto w-2/3 my-auto flex-grow h-[4px] bg-accent block md:hidden" />
         <Products />
       </div>
     </div>
@@ -52,7 +52,7 @@ function Products() {
 function LinkItem({ href, children, icon }: { href: string; children: React.ReactNode; icon: React.ReactNode }) {
   return (
     <li>
-      <Link href={href} className="rounded-md bg-white border border-transparent p-2 flex items-center gap-2 hover:bg-gray-100 hover:border hover:border-gray-200 transition-all duration-200">
+      <Link href={href} className="rounded-md bg-background text-primary border border-primary p-2 flex items-center gap-2  hover:text-accent hover:border hover:border-accent transition-all duration-200">
         {icon}
         {children}
       </Link>
