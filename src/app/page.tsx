@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div>
       <div className="flex flex-col items-center justify-center h-full mb-18">
-        <h1 className="text-4xl font-bold">Beam</h1>
+        <h1 className="text-4xl font-bold">beam</h1>
         <p className="text-lg">Digital Services for Bermuda</p>
       </div>
       <div className="flex flex-col md:flex-row gap-12">
