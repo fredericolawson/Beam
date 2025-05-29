@@ -49,7 +49,7 @@ function Technology() {
 
 function Resources() {
   return (
-    <div className="max-w-lg p-12 flex-1">
+    <div className="max-w-lg p-12 flex-1 flex flex-col justify-center items-center">
       <h3 className="heading-2 text-center">Resources</h3>
       <ul className="flex flex-col gap-2">
         <LinkItem
