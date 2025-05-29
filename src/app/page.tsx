@@ -1,13 +1,5 @@
 import Link from "next/link";
-import {
-  ArrowRight,
-  Calendar,
-  Car,
-  Martini,
-  MoveRight,
-  Radar,
-  Ship,
-} from "lucide-react";
+import { Calendar, Car, Martini, MoveRight, Radar, Ship } from "lucide-react";
 
 export default function Home() {
   return (
