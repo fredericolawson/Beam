@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 :root {
   --primary: #1d2b36;
   --foreground: #1d2b36;
@@ -10,13 +9,12 @@
 }
 
 @font-face {
-  font-family: 'TtLakesNeue';
-  src: url('/TT_Lakes_Neue_Trial_Medium.ttf') format('truetype');
+  font-family: "TtLakesNeue";
+  src: url("/TT_Lakes_Neue_Trial_Medium.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-
 
 @theme {
   --color-primary: var(--primary);
@@ -24,19 +22,28 @@
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
   --color-secondary: var(--secondary);
-  --font-sans: 'TtLakesNeue';
-  --font-mono: 'TtLakesNeue';
+  --font-sans: "TtLakesNeue";
+  --font-mono: "TtLakesNeue";
 }
-
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'TtLakesNeue';
+  font-family: "TtLakesNeue";
 }
 
 @layer components {
   .heading-2 {
-    @apply text-xl font-bold mb-2
+    @apply text-xl mb-2 uppercase;
+  }
+  .underline-spaced {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  .cta {
+    @apply bg-accent uppercase px-6 py-3 rounded-sm hover:bg-accent/90 transition-colors;
+  }
+  .cta-link {
+    @apply text-accent hover:text-accent/90 transition-colors italic;
   }
 }

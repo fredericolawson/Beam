@@ -1,63 +1,96 @@
 import Link from "next/link";
-import { Calendar, Car, Martini, Radar, Ship } from "lucide-react";
+import {
+  ArrowRight,
+  Calendar,
+  Car,
+  Martini,
+  MoveRight,
+  Radar,
+  Ship,
+} from "lucide-react";
 
 export default function Home() {
   return (
-    <div>
-      <div className="flex flex-col items-center justify-center h-full mb-18">
-        <h1 className="text-4xl font-bold">beam</h1>
-        <p className="text-lg">Digital Services for Bermuda</p>
-      </div>
-      <div className="flex flex-col md:flex-row gap-12">
+    <div className="flex flex-col h-full justify-center items-center flex-1">
+      <div className="flex flex-col md:flex-row border-b w-full flex-1">
         <Consulting />
-        <span className="h-66 my-auto flex-grow w-[4px] bg-accent hidden md:block" />
-        <span className="mx-auto w-2/3 my-auto flex-grow h-[4px] bg-accent block md:hidden" />
-        <Products />
+        <Technology />
       </div>
+      <Resources />
     </div>
   );
 }
 
 function Consulting() {
   return (
-    <div className="w-full">
-      <h2 className="heading-2">Consulting</h2>
-      <p>Digital commerce & brand strategy for Bermuda businesses</p>
+    <div className="w-full border-b md:border-b-0 md:border-r flex flex-col justify-center items-center gap-8 p-12 flex-1">
+      <div className="max-w-lg flex flex-col gap-4">
+        <h2 className="heading-2">Consulting Services</h2>
+        <p>
+          Delivering thoughtful digital commerce, marketing and brand strategy
+          to local businesses and associations.
+        </p>
+        <Link href="/consulting" className="underline-spaced">
+          <MoveRight size={48} strokeWidth={1} className="text-accent" />
+        </Link>
+      </div>
     </div>
   );
 }
 
-function Products() {
+function Technology() {
   return (
-    <div className="w-full flex flex-col gap-8">
-      <div>
+    <div className="w-full flex flex-col justify-center items-center gap-8 p-12 flex-1">
+      <div className="max-w-lg flex flex-col gap-4">
         <h2 className="heading-2">Technology</h2>
-        <ul>
-          <LinkItem href="https://taxis.beam.bm/" icon={<Car />}>
-            Beam Taxi
-          </LinkItem>
-        </ul>
+        <p>
+          Developing and implementing proprietary technology for consumer facing
+          buisinesses.
+        </p>
+        <a href="https://taxis.beam.bm/" className="underline-spaced">
+          <MoveRight size={48} strokeWidth={1} className="text-accent" />
+        </a>
       </div>
-      <div>
-        <h3 className="heading-2">Resources</h3>
-        <ul className="flex flex-col gap-2">
-          <LinkItem href="https://weather.beam.bm/" icon={<Radar />}>
-            Weather
-          </LinkItem>
-          <LinkItem href="https://bermudaferries.com/" icon={<Ship />}>
-            Bermuda Ferries
-          </LinkItem>
-          <LinkItem href="https://www.whatson.bm/" icon={<Calendar />}>
-            What&#39;s On Bermuda
-          </LinkItem>
-          <LinkItem
-            href="https://startup-drinks.com/bermuda"
-            icon={<Martini />}
-          >
-            Startup Drinks
-          </LinkItem>
-        </ul>
-      </div>
+    </div>
+  );
+}
+
+function Resources() {
+  return (
+    <div className="max-w-lg p-12 flex-1">
+      <h3 className="heading-2 text-center">Resources</h3>
+      <ul className="flex flex-col gap-2">
+        <LinkItem
+          href="https://taxis.beam.bm/"
+          icon={<Car className="text-accent" size={28} />}
+        >
+          Beam Taxi
+        </LinkItem>
+        <LinkItem
+          href="https://www.whatson.bm/"
+          icon={<Calendar className="text-accent" size={28} />}
+        >
+          What&#39;s On Bermuda
+        </LinkItem>
+        <LinkItem
+          href="https://weather.beam.bm/"
+          icon={<Radar className="text-accent" size={28} />}
+        >
+          Weather
+        </LinkItem>
+        <LinkItem
+          href="https://bermudaferries.com/"
+          icon={<Ship className="text-accent" size={28} />}
+        >
+          Bermuda Ferries
+        </LinkItem>
+        <LinkItem
+          href="https://startup-drinks.com/bermuda"
+          icon={<Martini className="text-accent" size={28} />}
+        >
+          Startup Drinks
+        </LinkItem>
+      </ul>
     </div>
   );
 }
@@ -75,7 +108,7 @@ function LinkItem({
     <li>
       <Link
         href={href}
-        className="rounded-md bg-background text-primary border border-primary p-2 flex items-center gap-2  hover:text-accent hover:border hover:border-accent transition-all duration-200"
+        className="rounded-md bg-background p-2 flex items-center gap-2 hover:text-accent transition-all duration-200 underline-spaced"
       >
         {icon}
         {children}

@@ -1,19 +1,22 @@
 import type { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
-
+import { Header } from "@/components/header";
 
 export const metadata: Metadata = {
   title: "Beam",
   description: "Digital Services for Bermuda",
 };
 
-export default function RootLayout({ children}: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body className="flex flex-col">
-        <div className="min-h-screen bg-background flex-1 flex flex-col mx-auto w-full text-primary p-4 md:p-8">
-          <main className="flex-1 flex flex-col items-center justify-center max-w-screen-2xl mx-auto w-full">
+        <div className="min-h-screen bg-background flex flex-col mx-auto w-full text-primary ">
+          <Header />
+          <main className="flex-grow flex flex-col mx-auto w-full">
             {children}
           </main>
           <Footer />
@@ -26,7 +29,7 @@ export default function RootLayout({ children}: Readonly<{ children: React.React
 
 function Footer() {
   return (
-    <footer className="flex justify-center items-center text-sm py-4">
+    <footer className="flex justify-center items-center text-sm py-4 bg-accent">
       Beam Bermuda Ltd &copy; {new Date().getFullYear()}
     </footer>
   );
