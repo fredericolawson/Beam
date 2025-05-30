@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: "TtLakesNeue";
-  src: url("/TT_Lakes_Neue_Trial_Medium.ttf") format("truetype");
+  src: url("/TT_Lakes_Neue_Trial_Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -22,19 +22,29 @@
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
   --color-secondary: var(--secondary);
-  --font-sans: "TtLakesNeue";
-  --font-mono: "TtLakesNeue";
+  --font-sans: "Inter", sans-serif;
+  --font-heading: "TtLakesNeue", sans-serif;
+  --font-mono: "Inter", monospace;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "TtLakesNeue";
+  font-family: "Inter", sans-serif;
 }
 
 @layer components {
+  .heading-1 {
+    @apply text-3xl font-bold mb-4 uppercase;
+    font-family: "TtLakesNeue", sans-serif;
+  }
   .heading-2 {
     @apply text-xl mb-2 uppercase;
+    font-family: "TtLakesNeue", sans-serif;
+  }
+  .heading-3 {
+    @apply text-lg mb-2 uppercase;
+    font-family: "TtLakesNeue", sans-serif;
   }
   .underline-spaced {
     text-decoration: underline;
@@ -42,8 +52,10 @@ body {
   }
   .cta {
     @apply bg-accent uppercase px-6 py-3 rounded-sm hover:bg-accent/90 transition-colors;
+    font-family: "TtLakesNeue", sans-serif;
   }
   .cta-link {
     @apply text-accent hover:text-accent/90 transition-colors italic;
+    font-family: "TtLakesNeue", sans-serif;
   }
 }

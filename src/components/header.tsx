@@ -13,8 +13,8 @@ export function Header() {
 
 function Logo() {
   return (
-    <Link href="/" className="flex flex-col md:items-center gap-2">
-      <h1 className="text-5xl tracking-wide">beam</h1>
+    <Link href="/" className="flex flex-col md:items-center gap-1 font-heading">
+      <h1 className="text-6xl ">beam</h1>
       <p className="text-md text-accent tracking-widest uppercase px-1">
         bermuda
       </p>
