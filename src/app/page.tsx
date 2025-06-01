@@ -62,7 +62,7 @@ function Resources() {
           href="https://www.whatson.bm/"
           icon={<Calendar className="text-accent" size={28} />}
         >
-          What&#39;s On Bermuda
+          What&#39;s On
         </LinkItem>
         <LinkItem
           href="https://weather.beam.bm/"
