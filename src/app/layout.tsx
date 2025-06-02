@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/beam.jpeg",
         width: 1200,
         height: 630,
         alt: "Beam - Digital Services for Bermuda",
@@ -71,7 +71,6 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
     shortcut: "/favicon-16x16.png",
   },
-  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
