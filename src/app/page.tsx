@@ -1,5 +1,13 @@
 import Link from "next/link";
-import { Calendar, Car, Martini, MoveRight, Radar, Ship } from "lucide-react";
+import {
+  Calendar,
+  Car,
+  Martini,
+  MoveRight,
+  Radar,
+  Ship,
+  Volleyball,
+} from "lucide-react";
 
 export default function Home() {
   return (
@@ -81,6 +89,12 @@ function Resources() {
           icon={<Martini className="text-accent" size={28} />}
         >
           Startup Drinks
+        </LinkItem>
+        <LinkItem
+          href="https://tennis.bm"
+          icon={<Volleyball className="text-accent" size={28} />}
+        >
+          Bermuda Tennis
         </LinkItem>
       </ul>
     </div>
