@@ -73,7 +73,7 @@ function Resources() {
           What&#39;s On
         </LinkItem>
         <LinkItem
-          href="https://weather.beam.bm/"
+          href="https://radar.bm/"
           icon={<Radar className="text-accent" size={28} />}
         >
           Weather
